@@ -32,9 +32,14 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  // '/': {
+  //   view: 'homepage'
+  // }
+  '/': 'HomepageController.index',
+  'post /student': 'StudentController.create',
+  'get /student': 'StudentController.find',
+  'put /student/:id': 'StudentController.update',
+  'delete /student/:id': 'StudentController.destroy',
 
   /***************************************************************************
   *                                                                          *

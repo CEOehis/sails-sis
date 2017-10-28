@@ -28,6 +28,9 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
+  main: {
+    adapter: 'sails-disk'
+  },
   localDiskDb: {
     adapter: 'sails-disk'
   },
