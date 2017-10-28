@@ -70,11 +70,26 @@ module.exports = {
 			}
 		}
 	},
-	// update: function (req, res, next) {
-	// 	res.json({todo: work on update action})
-	// }
+	update: function (req, res, next) {
+		var criteria = {};
+
+		criteria = _.merge({}, req.params.all(), req.body);
+		var id = req.param('id');
+
+		if(!id) {
+			return res.badRequest('No id provided.');
+		}
+
+		Student.update(id, criteria, function(err, student) {
+			if(student.length === 0) return res.notFound();
+
+			if(err) return next(err);
+		  
+		  res.json(student)
+		});
+	}
 	// destroy: function (req, res, next) {
-	// 	res.json({todo: work on destroy action})
+	// 	res.json({todo: "work on destroy action"})
 	// }
 
 };
