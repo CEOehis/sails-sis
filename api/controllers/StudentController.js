@@ -6,9 +6,12 @@
  */
 
 module.exports = {
+	// prevent defauls sails actions
 	  _config: {
     actions: false
   },
+
+  // REST create action
 	create: function(req, res, next) {
 
 	  var params = req.params.all();
@@ -23,6 +26,8 @@ module.exports = {
 
 	  });
 	},
+
+	// REST read/get action
 	find: function (req, res, next) {
 		var id = req.param('id');
 		var idShortCut = isShortCut(id);
@@ -70,6 +75,8 @@ module.exports = {
 			}
 		}
 	},
+
+	// REST update action
 	update: function (req, res, next) {
 		var criteria = {};
 
@@ -87,10 +94,25 @@ module.exports = {
 		  
 		  res.json(student)
 		});
+	},
+
+	// REST delete action
+	destroy: function (req,res) {
+		var id = req.param('id');
+		if (!id) return res.send("No id specified.",500);
+
+		Student.find(id, function foundStudent(err, result) {
+			if (err) return res.send(err,500);
+			if (!result) return res.send("No Student with that id exists.",404);
+
+			Student.destroy(id, function studentDestroyed(err) {
+				if (err) return res.send(err,500);
+
+				return res.redirect('/student');
+			});
+			
+		})
 	}
-	// destroy: function (req, res, next) {
-	// 	res.json({todo: "work on destroy action"})
-	// }
 
 };
 
