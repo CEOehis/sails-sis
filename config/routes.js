@@ -35,7 +35,7 @@ module.exports.routes = {
  
   '/': 'HomepageController.index',
   'post /student': 'StudentController.create',
-  'get /student/:id': 'StudentController.find',
+  'get /student/:id?': 'StudentController.find',
   'put /student/:id': 'StudentController.update',
   'delete /student/:id': 'StudentController.destroy',
 

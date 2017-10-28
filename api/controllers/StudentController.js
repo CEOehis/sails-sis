@@ -43,7 +43,7 @@ module.exports = {
 			var where = req.param('where');
 
 			if(_.isString(where)) {
-				where = JSON.parseJSON(where);
+				where = JSON.parse(where);
 			}
 
 			var options = {
