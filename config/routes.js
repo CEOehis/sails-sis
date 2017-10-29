@@ -38,6 +38,11 @@ module.exports.routes = {
   'get /student/:id?': 'StudentController.find',
   'put /student/:id?': 'StudentController.update',
   'delete /student/:id?': 'StudentController.destroy',
+  'post /studentresource': 'StudentResourceController.create',
+  'get /studentresource/:id?': 'StudentResourceController.find',
+  // 'put /student/:id?': 'StudentController.update',
+  // 'delete /student/:id?': 'StudentController.destroy',
+
 
   /***************************************************************************
   *                                                                          *
