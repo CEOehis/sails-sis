@@ -65,7 +65,9 @@ module.exports = {
 
 				if(err) return next(err);
 
-				return res.view('student');
+				return res.view('student', {student: student});
+				// res.json(student);
+
 			});
 		}
 
