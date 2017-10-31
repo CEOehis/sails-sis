@@ -55,12 +55,12 @@ module.exports = {
 
 			console.log("This is the options", options);
 
-			StudentResource.find(options, function(err, resource) {
-				if(resource === undefined) return res.notFound();
+			StudentResource.find(options, function(err, resources) {
+				if(resources === undefined) return res.notFound();
 
 				if(err) return next(err);
 
-				res.json(resource);
+				res.view('resources/index', {resources: resources});
 			});
 		}
 

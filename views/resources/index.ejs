@@ -1,0 +1,26 @@
+<div class="jumbotron">
+	<div class="container">
+		<h1>A big Title</h1>
+		<p>A brief description about the app and what it does.</p>
+		<p>Only in a couple of lines</p>
+		<a href="/start" class="btn btn-primary btn-lg">Get Started</a>
+	</div>
+</div>
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>Topic</th>
+				<th>Link</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(resources, function(resource) { %>
+			<tr>
+				<td><%= resource.title %></td>
+				<td><a href="<%= resource.link %>"><%= resource.link %></a> </td>
+			</tr>
+		<% }) %>
+		</tbody>
+	</table>
+</div>

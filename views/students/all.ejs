@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="row">
 		<% _.each(students, function(item) { %>
-		<a href="/students/<%= item.id %>"><div class="col-md-3"><%= item.firstName %> <%= item.lastName %></div>
+		<a href="/students/<%= item.id %>"><div class="col-md-3"><%= item.firstName %> <%= item.lastName %></div></a>
 	<% }) %>
 	</div>
 </div>
