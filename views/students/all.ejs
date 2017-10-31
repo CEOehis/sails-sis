@@ -1,4 +1,4 @@
-
+<% if(students !== undefined ) { %>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
@@ -8,8 +8,11 @@
 </div>
 <div class="container">
 	<div class="row">
-		<% _.each(student, function(item) { %>
-		<a href="/student/<%= item.id %>"><div class="col-md-3"><%= item.firstName %> <%= item.lastName %></div>
+		<% _.each(students, function(item) { %>
+		<a href="/students/<%= item.id %>"><div class="col-md-3"><%= item.firstName %> <%= item.lastName %></div>
 	<% }) %>
 	</div>
 </div>
+<% } %>
+
+
