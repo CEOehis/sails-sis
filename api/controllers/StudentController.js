@@ -42,7 +42,7 @@ module.exports = {
 
 				if(err) return next(err);
 
-				res.json(student)
+				return res.view('students/one', {student: student});
 			})
 		} else {
 			var where = req.param('where');
@@ -60,14 +60,12 @@ module.exports = {
 
 			console.log("This is the options", options);
 
-			Student.find(options, function(err, student) {
-				if(student === undefined) return res.notFound();
+			Student.find(options, function(err, students) {
+				if(students === undefined) return res.notFound();
 
 				if(err) return next(err);
 
-				return res.view('student', {student: student});
-				// res.json(student);
-
+				return res.view('students/all', {title: 'SIS | All Students', students: students});
 			});
 		}
 
