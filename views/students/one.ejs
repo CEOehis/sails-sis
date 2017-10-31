@@ -1,3 +1,18 @@
 <div class="container">
-	<h1><%= student.firstName %> <%= student.lastName %></h1>
+	<div class="row">
+		<div class="col-md-12">
+			<h1><%= student.firstName %> <%= student.lastName %>	
+			<button class="btn btn-success btn-lg pull-right">Edit Student Record</button>
+			<button class="btn btn-danger btn-lg pull-right">Delete Student Record</button>	
+			</h1>	
+		</div>
+	</div>
+	<img src="https://api.adorable.io/avatars/300/wolverine.png" class="img-responsive">
+	<p>First Name: <%= student.firstName %></p>
+	<p>Middle Name: <%= student.middleName %></p>
+	<p>Last Name: <%= student.lastName %></p>
+	<p>Admission Year: </p>
+	<p>Date of birth: <%= student.dateOfBirth %></p>
+	<p>Gender: <%= student.gender %></p>
+	<p>Religion: <%= student.religion %></p>
 </div>
