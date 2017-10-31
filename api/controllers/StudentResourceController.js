@@ -37,7 +37,7 @@ module.exports = {
 
 				if(err) return next(err);
 
-				res.json(resource)
+				res.view('resources/post', {resource: resource})
 			})
 		} else {
 			var where = req.param('where');
