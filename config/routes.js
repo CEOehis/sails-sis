@@ -33,7 +33,13 @@ module.exports.routes = {
   ***************************************************************************/
 
  
-  '/': 'HomepageController.index',
+  // '/': 'HomepageController.index',
+  'get /': {
+    view: 'homepage'
+  },
+  'get /students/new': {
+    view: 'students/new'
+  },
   '/start': 'StartController.index',
   'post /student': 'StudentController.create',
   'get /students/:id?': 'StudentController.find',
