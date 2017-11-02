@@ -3,7 +3,9 @@
 		<div class="col-md-12">
 			<h1><%= student.firstName %> <%= student.lastName %>	
 			<button class="btn btn-success btn-lg pull-right">Edit Student Record</button>
-			<button class="btn btn-danger btn-lg pull-right">Delete Student Record</button>	
+			<form action="/student/delete/<%= student.id %>" method="POST">
+				<button class="btn btn-danger btn-lg">Delete Student Record</button>
+			</form>
 			</h1>	
 		</div>
 	</div>

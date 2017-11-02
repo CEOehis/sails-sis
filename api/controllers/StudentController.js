@@ -8,7 +8,9 @@
 module.exports = {
 	// prevent defauls sails actions
 	  _config: {
-    actions: false
+    actions: false,
+    shortcuts: false,
+    rest: false
   },
 
   // REST create action
@@ -22,7 +24,8 @@ module.exports = {
 
       res.status(201);
 
-      res.json(student);
+      // res.json(student);
+      return res.redirect('/students')
 
 	  });
 	},
@@ -108,7 +111,7 @@ module.exports = {
 			Student.destroy(id, function studentDestroyed(err) {
 				if (err) return res.send(err,500);
 
-				return res.redirect('/student');
+				return res.redirect('/students');
 			});
 			
 		})
