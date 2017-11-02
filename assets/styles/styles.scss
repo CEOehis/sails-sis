@@ -10,6 +10,13 @@ body {
   padding-bottom: $height-footer + 10px;
 }
 
+.display-inline-block {
+  display: inline;
+  h1, button {
+    margin: 2px;
+  }
+}
+
 .app-nav {
   margin-bottom: 0;
 }

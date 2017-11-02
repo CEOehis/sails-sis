@@ -1,12 +1,15 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h1><%= student.firstName %> <%= student.lastName %>	
-			<button class="btn btn-success btn-lg pull-right">Edit Student Record</button>
-			<form action="/student/delete/<%= student.id %>" method="POST">
-				<button class="btn btn-danger btn-lg">Delete Student Record</button>
-			</form>
+			<h1 class="display-inline-block"><%= student.firstName %> <%= student.lastName %>	
 			</h1>	
+			<div class="display-inline-block pull-right">
+				<a href="/students/edit/<%= student.id %>" class="btn btn-success btn-lg display-inline-block">Edit Student Record</a>
+				<form class="display-inline-block" action="/student/delete/<%= student.id %>" method="POST">
+				<button class="btn btn-danger btn-lg">Delete Student Record</button>
+				</form>
+			</div>
+
 		</div>
 	</div>
 	<img src="https://api.adorable.io/avatars/300/wolverine.png" class="img-responsive">
