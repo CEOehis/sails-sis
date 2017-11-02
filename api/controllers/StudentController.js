@@ -81,7 +81,16 @@ module.exports = {
 
 	// REST update action
 	edit: function (request, response) {
-    return response.view('students/edit');
+		var id = request.param('id');
+		if (!id) return response.send("Whoops, i lost track of whom you wanted to edit", 500);
+
+		Student.findOne(id, function(err, student) {
+			if(student === undefined) return res.notFound();
+
+			if(err) return next(err);
+
+			return response.view('students/edit',{student: student});
+		});
   },
 
 
