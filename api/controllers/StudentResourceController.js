@@ -17,7 +17,8 @@ module.exports = {
 
       res.status(201);
 
-      res.json(resource);
+      // res.json(resource);
+      return res.redirect('/studentresource')
 
 	  });
 	},

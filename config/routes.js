@@ -40,6 +40,9 @@ module.exports.routes = {
   'get /students/new': {
     view: 'students/new'
   },
+  'get /studentresource/new': {
+    view: 'resources/new'
+  },
   '/start': 'StartController.index',
   'get /students/edit/:id?': 'StudentController.edit',
   'post /student': 'StudentController.create',
