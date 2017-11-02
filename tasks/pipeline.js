@@ -29,7 +29,8 @@ var jsFilesToInject = [
   'js/dependencies/sails.io.js',
 
   // Dependencies like jQuery, or Angular are brought in here
-  'js/vendor/jquery-3.2.1.js',
+  'vendor/jquery/dist/jQuery.min.js',
+  'vendor/bootstrap/assets/javascripts/bootstrap.min.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.

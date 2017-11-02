@@ -1,4 +1,5 @@
 $height-footer: 60px;
+$color-primary: #14ACF2;
 
 html {
   height: 100%;
@@ -8,6 +9,16 @@ body {
   position: relative;
   min-height: 100%;
   padding-bottom: $height-footer + 10px;
+}
+
+.navbar-default .page-title {
+  color: $color-primary;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: $color-primary;
 }
 
 .display-inline-block {
