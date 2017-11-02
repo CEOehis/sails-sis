@@ -80,6 +80,11 @@ module.exports = {
 	},
 
 	// REST update action
+	edit: function (request, response) {
+    return response.view('students/edit');
+  },
+
+
 	update: function (req, res, next) {
 		var criteria = {};
 

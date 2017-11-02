@@ -41,6 +41,7 @@ module.exports.routes = {
     view: 'students/new'
   },
   '/start': 'StartController.index',
+  'get /students/edit/:id?': 'StudentController.edit',
   'post /student': 'StudentController.create',
   'get /students/:id?': 'StudentController.find',
   'put /students/:id?': 'StudentController.update',
