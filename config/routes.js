@@ -45,6 +45,7 @@ module.exports.routes = {
   'post /student': 'StudentController.create',
   'get /students/:id?': 'StudentController.find',
   'put /students/:id?': 'StudentController.update',
+  'post /students/edit/:id?': 'StudentController.update',
   'post /student/delete/:id?': 'StudentController.destroy',
   'post /studentresource': 'StudentResourceController.create',
   'get /studentresource/:id?': 'StudentResourceController.find',

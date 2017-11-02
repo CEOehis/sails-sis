@@ -1,5 +1,5 @@
 <% if(typeof student == 'object' && student) { %>
-<form action="/students/<%= student.id %>" method="POST" role="form">
+<form action="/students/edit/<%= student.id %>" method="POST" role="form">
   <legend>Student details</legend>
   <div class="form-group">
     <label for="first-name">First Name</label>
@@ -15,7 +15,7 @@
     <label for="last-name">E-mail</label>
     <input type="email" class="form-control input-lg" name="email" id="" placeholder="sample@email.com" value="<%= student.email %>">
     <label for="last-name">Gender</label>
-    <input type="dropdown" class="form-control input-lg" name="gender" id="" placeholder="Male"  value="<%= student.firstName %>" value="<%= student.gender %>">
+    <input type="dropdown" class="form-control input-lg" name="gender" id="" placeholder="Male"  value="<%= student.gender %>" value="<%= student.gender %>">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
