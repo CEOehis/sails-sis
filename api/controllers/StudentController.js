@@ -85,7 +85,7 @@ module.exports = {
 		if (!id) return response.send("Whoops, i lost track of whom you wanted to edit", 500);
 
 		Student.findOne(id, function(err, student) {
-			if(student === undefined) return res.notFound();
+			if(student === undefined) return response.notFound();
 
 			if(err) return next(err);
 
@@ -109,9 +109,7 @@ module.exports = {
 
 			if(err) return next(err);
 		  
-		  res.json(student)
-		  // return res.view('students/one', {student: student});
-		  // return res.redirect('/students/')
+		  return res.redirect('students/'+ id);
 		});
 	},
 
