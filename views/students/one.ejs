@@ -1,30 +1,24 @@
-<nav class="nav navbar">
-	<div class="container">
-  <div class="row">
-    <div class="col-md-12">			
-			<h2 class="display-inline-block"><a href="/students/edit/<%= student.id %>" class="btn btn-info">Go back</a></h2>
-      <div class="display-inline-block pull-right">
-        <a href="/students/edit/<%= student.id %>" class="btn btn-success">Edit Student Record</a>
-        <form class="display-inline-block" action="/student/delete/<%= student.id %>" method="POST">
-          <button class="btn btn-danger">Delete Student Record</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-</nav>
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <% if(student.gender == 'Male') { %>
-          <img src="/images/male.jpg" alt="image" style="width: 100%">
+          <img src="/images/male.jpg" alt="image" width="300px">
           <% } else { %>
             <img src="/images/female.jpg" alt="image" class="img-responsive" width="300px">
             <% } %>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-8">
       	<h1><%= student.firstName %> <%= student.lastName %></h1>
+        <div class="display-inline-block">
+          <a href="/students/edit/<%= student.id %>" class="btn btn-success">Edit Student Record</a>
+          <form class="display-inline-block" action="/student/delete/<%= student.id %>" method="POST">
+            <button class="btn btn-danger">Delete Student Record</button>
+          </form>
+        </div>
+        <a href="/students" class="btn btn-inf">Go back</a>
+
+
       </div>
     </div>
   </div>
