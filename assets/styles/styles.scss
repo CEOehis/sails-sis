@@ -11,6 +11,24 @@ body {
   padding-bottom: $height-footer + 10px;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+    border-radius: 5px;
+    background: #008080;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    &:hover {
+      box-shadow: 5px 8px 16px 0 rgba(0,0,0,0.7);
+    }
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+    .card-block {
+      padding: 2px 16px;
+    }
+}
+
 .navbar-default .page-title {
   color: $color-primary;
   font-size: 20px;

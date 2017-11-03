@@ -1,18 +1,30 @@
 <% if(students !== undefined ) { %>
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h2>Students<a href="/students/new" class="btn btn-primary pull-right">Enroll new student</a></h2>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Students<a href="/students/new" class="btn btn-primary pull-right">Enroll new student</a></h2>
+    </div>
+  </div>
 </div>
 <div class="container">
-	<div class="row">
-		<% _.each(students, function(item) { %>
-		<a href="/students/<%= item.id %>"><div class="col-md-3"><%= item.firstName %> <%= item.lastName %></div></a>
-	<% }) %>
-	</div>
+  <div class="row">
+    <% _.each(students, function(item) { %>
+      <div class="col-md-3">
+        <a href="/students/<%= item.id %>">
+          <div class="card">
+          	<% if(item.gender == 'Male') { %>
+            <img src="/images/male.jpg" alt="image" style="width: 100%">
+            <% } else { %>
+            <img src="/images/female.jpg" alt="image" style="width: 100%">
+            <% } %>
+            <div class="card-block">
+              <h4><b><%= item.firstName %> <%= item.lastName %></b></h4>
+              <p>Student</p>
+            </div>
+          </div>
+        </a>
+      </div>
+        <% }) %>
+  </div>
 </div>
 <% } %>
-
-
