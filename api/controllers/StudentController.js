@@ -45,6 +45,8 @@ module.exports = {
 
 				if(err) return next(err);
 
+				// res.json(student)
+
 				return res.view('students/one', {student: student});
 			})
 		} else {

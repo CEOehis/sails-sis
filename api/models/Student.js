@@ -28,7 +28,7 @@ module.exports = {
   		required: true
   	},
   	dateOfBirth: {
-  		type: 'date',
+  		type: 'datetime',
   		required: true
   	},
   	email: {
@@ -38,7 +38,7 @@ module.exports = {
   	},
   	gender: {
   		type: 'string',
-  		enum: ['Male', 'Female'],
+  		enum: ['male', 'female'],
   		required: true,
   		size: 16
   	},
