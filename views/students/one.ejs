@@ -17,28 +17,36 @@
           </form>
         </div>
         <a href="/students" class="btn btn-inf">Go back</a>
-
-
       </div>
     </div>
   </div>
 </div>
-<p>First Name:
-  <%= student.firstName %>
-</p>
-<p>Middle Name:
-  <%= student.middleName %>
-</p>
-<p>Last Name:
-  <%= student.lastName %>
-</p>
-<p>Admission Year: </p>
-<p>Date of birth:
-  <%= student.dateOfBirth %>
-</p>
-<p>Gender:
-  <%= student.gender %>
-</p>
-<p>Religion:
-  <%= student.religion %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Personal Information</h2>
+      <p>Phone Number: <%= student.mobile %></p>
+      <p>Email: <%= student.email %></p>
+      <p>Date of Birth: <%= formatDate(student.dateOfBirth) %></p>
+      <p>Religion: <%= student.religion %></p>
+    </div>
+    <div class="col-md-6">
+      <h2>Academic Information</h2>
+      <p>Course: <%= student.course %></p>
+      <p>Level: <%= student.level %></p>
+      <p>Grade: <%= student.grade %></p>
+      <p>Date registered: <%= formatDate(student.createdAt) %></p>
+    </div>
+  </div>
+
+
+
+<% function formatDate(date) { %>
+<%   var d = new Date(date); %>
+<%   var month = '' + (d.getMonth() + 1); %>
+<%   var day = '' + d.getDate(); %>
+<%   var year = d.getFullYear(); %>
+<%    if (month.length < 2) month = '0' + month; %>
+<%    if (day.length < 2) day = '0' + day; %>
+<%    return [year, month, day].join('-'); %>
+<% } %>
