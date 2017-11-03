@@ -31,9 +31,9 @@ module.exports.connections = {
   main: {
     adapter: 'sails-disk'
   },
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
+  // localDiskDb: {
+  //   adapter: 'sails-disk'
+  // },
 
   /***************************************************************************
   *                                                                          *
@@ -63,9 +63,18 @@ module.exports.connections = {
   //   adapter: 'sails-mongo',
   //   host: 'localhost',
   //   port: 27017,
-  //   user: 'username', //optional
-  //   password: 'password', //optional
-  //   database: 'your_mongo_db_name_here' //optional
+  //   // user: 'username', //optional
+  //   // password: 'password', //optional
+  //   database: 'mySailsDB' //optional
+  // },
+  // for mlab
+  // someMongodbServer: {
+  // 	adapter: 'sails-mongo',
+  // 	host: 'ds245885.mlab.com',
+  // 	port: 45885,
+  // 	user: 'admin',
+  // 	password: 'admin',
+  // 	database: 'mysailsdb'
   // },
 
   /***************************************************************************

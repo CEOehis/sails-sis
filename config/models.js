@@ -19,7 +19,7 @@ module.exports.models = {
   ***************************************************************************/
   // connection: 'localDiskDb',
   connection: 'main',
-
+  // connection: 'someMongodbServer',
   /***************************************************************************
   *                                                                          *
   * How and whether Sails will attempt to automatically rebuild the          *
@@ -29,6 +29,6 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   // migrate: 'alter'
-  //migrate: 'alter'
+  migrate: 'alter',
 
 };
