@@ -11,7 +11,6 @@ module.exports = {
   	firstName: {
   		type: 'string',
   		size: 128,
-  		required: true
   	},
   	middleName: {
   		type: 'string',
@@ -20,62 +19,49 @@ module.exports = {
   	lastName: {
   		type: 'string',
   		size: 128,
-  		required: true
   	},
   	mobile: {
   		type: 'string',
   		size: 128,
-  		required: true
   	},
   	dateOfBirth: {
   		type: 'datetime',
-  		required: true
   	},
   	email: {
   		type: 'string',
   		size: 128,
-  		required: true,
   	},
   	gender: {
   		type: 'string',
   		enum: ['male', 'female'],
-  		required: true,
   		size: 16
   	},
+    religion: {
+      type: 'string',
+      enum: ['bhudism', 'christianity', 'islam'],
+    },
   	address: {
   		type: 'string',
   		size: 128,
-  		// required: true
   	},
   	city: {
   		type: 'string',
   		size: 128,
   	},
-  	State: {
+  	state: {
   		type: 'string',
   		size: 128
-  	}
-
-  	// contacts: {
-   //    type: 'string',
-   //    enum: ['mobile', 'work', 'home', 'skype', 'email'],
-   //    required: true,
-   //    size: 16
-   //  },
-   //  value: {
-   //    type: 'string',
-   //    size: 128,
-   //    required: true
-   //  },
-    // student: {
-    //   model: 'Student',
-    //   required: true
-    // }
-
-    // contacts: {
-    //   collection: 'StudentContact',
-    //   via: 'student'
-    // }
+  	},
+    course: {
+      type: 'string',
+      size: 128,
+    },
+    level: {
+      type: 'string'
+    },
+    grade: {
+      type: 'string'
+    }
   }
 };
 
