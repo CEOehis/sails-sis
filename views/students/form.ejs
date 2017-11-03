@@ -1,43 +1,26 @@
+<% var students %>
 <% if(typeof student == 'object' && student) { %>
-<form action="/students/edit/<%= student.id %>" method="POST" role="form">
-  <legend>Student details</legend>
-  <div class="form-group">
-    <label for="first-name">First Name</label>
-    <input type="text" class="form-control" name="firstName" id="" placeholder="First Name" value="<%= student.firstName %>">
-    <label for="middle-name">Middle Name</label>
-    <input type="text" class="form-control" name="middleName" id="" placeholder="Middle Name" value="<%= student.middleName %>">
-    <label for="last-name">Last Name</label>
-    <input type="text" class="form-control" name="lastName" id="" placeholder="Last Name" value="<%= student.lastName %>">
-    <label for="phone">Phone Number</label>
-    <input type="text" class="form-control" name="mobile" id="" placeholder="+234 XXX XXX XXXX" value="<%= student.phone %>">
-    <label for="last-name">Date of Birth</label>
-    <input type="text" class="form-control" name="dateOfBirth" id="" placeholder="dd/mm/yyyy" value="<%= student.dateOfBirth %>">
-    <label for="last-name">E-mail</label>
-    <input type="email" class="form-control" name="email" id="" placeholder="sample@email.com" value="<%= student.email %>">
-    <label for="last-name">Gender</label>
-    <input type="dropdown" class="form-control" name="gender" id="" placeholder="Male"  value="<%= student.gender %>" value="<%= student.gender %>">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<% } else{ %>
-<form action="/student" method="POST" role="form">
-  <legend>Student details</legend>
-  <div class="form-group">
-    <label for="first-name">First Name</label>
-    <input type="text" class="form-control" name="firstName" id="" placeholder="First Name">
-    <label for="middle-name">Middle Name</label>
-    <input type="text" class="form-control" name="middleName" id="" placeholder="Middle Name">
-    <label for="last-name">Last Name</label>
-    <input type="text" class="form-control" name="lastName" id="" placeholder="Last Name">
-    <label for="phone">Phone Number</label>
-    <input type="text" class="form-control" name="mobile" id="" placeholder="+234 XXX XXX XXXX">
-    <label for="last-name">Date of Birth</label>
-    <input type="text" class="form-control" name="dateOfBirth" id="" placeholder="dd/mm/yyyy">
-    <label for="last-name">E-mail</label>
-    <input type="email" class="form-control" name="email" id="" placeholder="sample@email.com">
-    <label for="last-name">Gender</label>
-    <input type="dropdown" class="form-control" name="gender" id="" placeholder="M">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<% students = student; %>
+<% } else { %>
+<% students = {firstName: "", middleName: "", lastName: "", phone: "", dateOfBirth: "", email: "", gender: ""} %>
 <% } %>
+<form action="/students/edit/<%= students.id %>" method="POST" role="form">
+  <legend>Student details</legend>
+  <div class="form-group">
+    <label for="first-name">First Name</label>
+    <input type="text" class="form-control" name="firstName" id="" placeholder="First Name" value="<%= students.firstName %>" pattern="[a-zA-Z]+" required>
+    <label for="middle-name">Middle Name</label>
+    <input type="text" class="form-control" name="middleName" id="" placeholder="Middle Name" value="<%= students.middleName %>" pattern="[a-zA-Z]+" required>
+    <label for="last-name">Last Name</label>
+    <input type="text" class="form-control" name="lastName" id="" placeholder="Last Name" value="<%= students.lastName %>" pattern="[a-zA-Z]+" required>
+    <label for="phone">Phone Number</label>
+    <input type="text" class="form-control" name="mobile" id="" placeholder="+234 XXX XXX XXXX" value="<%= students.phone %>" pattern="[0-9]{13}">
+    <label for="last-name">Date of Birth</label>
+    <input type="date" class="form-control" name="dateOfBirth"  data-date-format="dd-mm-yyyy" id="" placeholder="dd/mm/yyyy" value="<%= students.dateOfBirth %>" required>
+    <label for="last-name">E-mail</label>
+    <input type="email" class="form-control" name="email" id="" placeholder="sample@email.com" value="<%= students.email %>">
+    <label for="last-name">Gender</label>
+    <input type="dropdown" class="form-control" name="gender" id="" placeholder="Male"  value="<%= students.gender %>">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
