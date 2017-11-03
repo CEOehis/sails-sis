@@ -20,7 +20,12 @@
     <label for="last-name">E-mail</label>
     <input type="email" class="form-control" name="email" id="" placeholder="sample@email.com" value="<%= students.email %>">
     <label for="last-name">Gender</label>
-    <input type="dropdown" class="form-control" name="gender" id="" placeholder="Male"  value="<%= students.gender %>">
+    <select name="gender" class="form-control" placeholder='female'>
+      <!-- <option value="" placeholder="Male"></option> -->
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <!-- <input type="dropdown" class="form-control" name="gender" id="" placeholder="Male"  value="<%= students.gender %>"> -->
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
