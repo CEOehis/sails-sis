@@ -75,6 +75,11 @@ module.exports.connections = {
   	user: 'admin',
   	password: 'admin',
   	database: 'mysailsdb'
+  },   
+  // for heroku deployment
+  herokuMongo: {
+      adapter: 'sails-mongo',
+      url: process.env.MONGODB_URI
   },
 
   /***************************************************************************

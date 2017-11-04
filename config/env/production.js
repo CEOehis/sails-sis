@@ -20,9 +20,13 @@ module.exports = {
   blueprints: {
     shortcuts: false
   },
-  // models: {
-  //   connection: 'someMysqlServer'
-  // },
+  models: {
+    connection: 'herokuMongo'
+  },
+  session: {
+    adapter: 'connect-mongo',
+    url: process.env.MONGODB_URI
+  }
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *
