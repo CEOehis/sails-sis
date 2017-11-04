@@ -19,7 +19,7 @@ module.exports = {
   port: 80,
   blueprints: {
     shortcuts: false
-  }
+  },
   // models: {
   //   connection: 'someMysqlServer'
   // },
