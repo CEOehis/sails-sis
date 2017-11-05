@@ -1,20 +1,41 @@
-*.gem
-.sass-cache
-bootstrap.css
-bootstrap-responsive.css
-Gemfile.lock
-*.gemfile.lock
-.rvmrc
-.rbenv-version
+# Ignore docs files
+_gh_pages
+_site
+.ruby-version
 
-# Ignore bundler config
-/.bundle
-/vendor/cache
-/vendor/bundle
-tmp/
-test/screenshots/
-test/dummy_rails/log/*.log
-test/dummy_rails/public/assets/
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*.zip
+*~
+
+# OS or Editor folders
+._*
+.cache
 .DS_Store
+.idea
+.project
+.settings
+.tmproj
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+Thumbs.db
+
+# Komodo
+.komodotools
+*.komodoproject
+
+# Jekyll metadata
+docs/.jekyll-metadata
+
+# Folders to ignore
+bower_components
 node_modules
-/.idea
