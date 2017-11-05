@@ -12,6 +12,37 @@ body {
   padding-bottom: @height-footer + 10px;
 }
 
+.home-page-hero {
+    background-image: url('https://picsum.photos/1920/1080?image=1073');
+    h1, p {
+      text-shadow: black 0.3em 0.3em 0.3em;
+    }
+}
+
+.resource-page-hero {
+    background-image: url('https://picsum.photos/1920/1080?image=949');
+    h1, p {
+      text-shadow: black 1px 1px 0.3em;
+    }
+}
+
+.post-hero {
+    background-image: url('https://picsum.photos/1920/1080?random');
+    h1, p {
+      text-shadow: black 1px 1px 0.3em;
+    }
+}
+
+.home-page-hero, .resource-page-hero, .post-hero {
+    margin-bottom: 0px;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
     transition: 0.3s;

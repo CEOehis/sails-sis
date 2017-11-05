@@ -38,7 +38,7 @@ module.exports = {
 
 				if(err) return next(err);
 
-				res.view('resources/post', {resource: resource})
+				res.view('resources/post', {title: resource.title, resource: resource})
 			})
 		} else {
 			var where = req.param('where');
@@ -61,7 +61,7 @@ module.exports = {
 
 				if(err) return next(err);
 
-				res.view('resources/index', {resources: resources});
+				res.view('resources/index', {title: 'Students resource', resources: resources});
 			});
 		}
 

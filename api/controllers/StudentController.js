@@ -47,7 +47,7 @@ module.exports = {
 
 				// res.json(student)
 
-				return res.view('students/one', {student: student});
+				return res.view('students/one', {title: student.firstName + "'s profile", student: student});
 			})
 		} else {
 			var where = req.param('where');
@@ -70,7 +70,7 @@ module.exports = {
 
 				if(err) return next(err);
 
-				return res.view('students/all', {title: 'SIS | All Students', students: students});
+				return res.view('students/all', {title: 'All Students', students: students});
 			});
 		}
 
@@ -91,7 +91,7 @@ module.exports = {
 
 			if(err) return next(err);
 
-			return response.view('students/edit',{student: student});
+			return response.view('students/edit',{title: 'Edit', student: student});
 		});
   },
 
