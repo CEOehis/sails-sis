@@ -15,7 +15,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
     transition: 0.3s;
     border-radius: 5px;
-    background: #008080;
+    background: @color-primary;
     margin-bottom: 30px;
     margin-top: 15px;
     &:hover {
@@ -27,6 +27,9 @@ body {
     .card-block {
       padding: 2px 16px;
       color: #dadada;
+      h4 {
+        color: white;
+      }
     }
 }
 
@@ -45,13 +48,13 @@ form {
 }
 
 .navbar-default .page-title {
-  color: @color-primary;
+  // color: @color-primary;
   font-size: 20px;
   font-weight: bold;
 }
 
 .btn-primary {
-  background-color: @color-primary;
+  // background-color: @color-primary;
 }
 
 .display-inline-block {
