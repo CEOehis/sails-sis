@@ -10,7 +10,7 @@
 	  <% _.each(resources, function(resource) { %>
 	  <article>
 	  	<h2><a href="/studentresource/<%= resource.id %>"><%= resource.title %></a></h2>
-	  	<p><%= resource.body %></p>
+	  	<p><%= resource.body.substring(0,300)  %> ... <b></strong><em>read more</em></b></p>
 	  </article>
 	  <% }) %>
 </div>
