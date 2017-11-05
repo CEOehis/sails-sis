@@ -1,5 +1,6 @@
-@height-footer: 60px;
+@height-footer: 70px;
 @color-primary: #14ACF2;
+@color-footer: #327ba3;
 
 html {
   height: 100%;
@@ -79,11 +80,21 @@ form {
   width: 100%;
   position: absolute;
   height: @height-footer;
-  background-color: #f5f5f5;
+  background-color: @color-footer;
+  color: white;
   left: 0;
   right: 0;
   bottom: 0;
+  margin-top: 20px;
+  font-size: 20px;
   .footer-block {
     margin: 20px 0;
+    a {
+      color: #8ec6e5;
+      &:hover {
+        color: #c9dae2;
+        text-decoration: none;
+      }
+    }
   }
 }
